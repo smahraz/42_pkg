@@ -15,8 +15,6 @@ for pkg in "$@"; do
     echo "$pkg exists"
   elif data=$(curl -fsSL $RAW_URL/package/$pkg.sh 2> /dev/null); then
     source <(echo "$data")
-  # elif [ 1 == 1 ]; then
-  #   source package/$pkg.sh
   else
     curl_exit_code $pkg $?
   fi
