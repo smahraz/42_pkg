@@ -10,7 +10,7 @@ tar -xzf $ARCHIVE_NAME
 
 # rm old install
 rm -rf $BIN_FILES_PATH/nvim
-rm -rf $BIN_PATH/nvim
+rm -rf $BIN_PATH/nvim # symbolic link
 
 cp -r nvim-linux-x86_64 $BIN_FILES_PATH/nvim
 ln -s $BIN_FILES_PATH/nvim/bin/nvim $BIN_PATH/nvim
